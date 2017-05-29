@@ -8,3 +8,5 @@ One of the main features of this bot is heavy user input sanitization. This will
 If you have a password for identifying with NickServ, simply put it in the file "identify.txt".
 
 Make sure to run this as a separate user to your web server. Create a hard link between the grid.txt configuration file and the file on your web server that is used by render.php.
+
+**Note that the bot file in this repository contains hard-coded connection and configuration information. As I described above, this program is not designed to be robust so you'll have to change the values manually for your own use.**
