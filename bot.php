@@ -13,7 +13,7 @@ if ($ircSocket) {
     $currentX = "0";
     $currentY = "0";
 
-    $grid = preg_replace("/[^a-z\n: ]/", '', file_get_contents("grid.txt"));
+    $grid = preg_replace("/[^a-eghiklnoprtuwy\n: ]/", '', file_get_contents("grid.txt"));
     $grid = explode("\n", $grid);
     $confArray = array();
     foreach($grid AS $row){
@@ -28,7 +28,7 @@ if ($ircSocket) {
         $grid = rtrim($grid);
         //echo $grid;
 
-        file_put_contents("grid.txt", preg_replace("/[^a-z\n: ]/", '', $grid));
+        file_put_contents("grid.txt", preg_replace("/[^a-eghiklnoprtuwy\n: ]/", '', $grid));
     }
 
     while(1) {
