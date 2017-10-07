@@ -10,7 +10,7 @@
   </head>
   <body>
     <table class="irc">
-<?php set_time_limit(1); echo "<tr><td bgcolor=\"" . str_replace(":", "\"></td></tr>\n<tr><td bgcolor=\"", str_replace(" ", "\"></td><td bgcolor=\"", str_replace("\n", "", preg_replace("/[^a-z: ]/", "", file_get_contents("grid.txt"))))) . "\"></td></tr>\n"; ?>
+<?php set_time_limit(1); echo "<tr><td bgcolor=\"" . str_replace(":", "\"></td></tr>\n<tr><td bgcolor=\"", str_replace(" ", "\"></td><td bgcolor=\"", str_replace("\n", "", preg_replace("/[^a-eghiklnoprtuwy: ]/", "", file_get_contents("grid.txt"))))) . "\"></td></tr>\n"; ?>
     </table>
   </body>
 </html>
