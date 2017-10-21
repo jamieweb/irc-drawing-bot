@@ -32,7 +32,7 @@ if ($ircSocket) {
     }
 
     while(1) {
-        while($data = preg_replace("/[^A-Za-z0-9! ]/", '', fgets($ircSocket, 128))) {
+        while($data = preg_replace("/[^A-Za-z0-9! ]/", '', filter_var(strtolower(rtrim(substr(fgets($ircSocket, 128), 0, 125))), FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH))) {
             //echo $data;
             if((trim(explode(' ', $data)[0]) == "PING") && (preg_match("/freenodenet$/", trim(explode(' ', $data)[1])))) {
                 fwrite($ircSocket, "PONG\n");
