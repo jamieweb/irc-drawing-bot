@@ -3,7 +3,7 @@ An IRC bot that can paint pixels on a canvas.
 
 This is the IRC bot responsible for the canvas at https://www.jamieweb.net/projects/irc-drawing-bot/. The bot is not designed to be robust or user friendly, but it should be easy to modify for your own needs given some basic programming/PHP knowledge.
 
-One of the main features of this bot is heavy user input sanitization. This will need to be adjusted manually depending on what you are using it for.
+One of the main features of this bot is heavy user input sanitization and verification, meaning that actual user input is never used to construct the pixel array. This will need to be adjusted manually depending on what you are using it for.
 
 If you have a password for identifying with NickServ, simply put it in the file "identify.txt".
 
